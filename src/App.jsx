@@ -3,6 +3,7 @@ import "./assets/fonts/EnterCommand.ttf";
 import "./assets/fonts/EnterCommand-Bold.ttf";
 import "./assets/fonts/EnterCommand-Italic.ttf";
 import { PlayerComponent } from "./components/PlayerComponent";
+import { Header } from "./components/Sections/Header";
 
 export const App = () => {
   const [name, setName] = useState("Hero");
@@ -17,12 +18,7 @@ export const App = () => {
 
   return (
     <>
-      <p className="font-enterCommand text-sm">Find me in APP.jsx Small</p>
-      <p className="font-enterCommand text-base">Find me in APP.jsx Base</p>
-      <p className="font-enterCommand text-lg">Find me in APP.jsx Large</p>
-      <p className="font-enterCommand text-xl">Find me in APP.jsx XL</p>
-      <p className="font-enterCommand text-2xl">Find me in APP.jsx XXL</p>
-      <p className="font-enterCommand text-4xl">Find me in APP.jsx XXXL</p>
+      <Header />
       <PlayerComponent />
     </>
   );
