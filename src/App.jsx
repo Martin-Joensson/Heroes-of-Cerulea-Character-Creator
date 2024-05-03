@@ -4,6 +4,8 @@ import "./assets/fonts/EnterCommand-Bold.ttf";
 import "./assets/fonts/EnterCommand-Italic.ttf";
 import { PlayerComponent } from "./components/PlayerComponent";
 import { Header } from "./components/Sections/Header";
+import { RandomKin } from "./components/randomizers/RandomKin";
+import { Button } from "./components/Button";
 
 export const App = () => {
   const [name, setName] = useState("Hero");
@@ -20,6 +22,9 @@ export const App = () => {
     <>
       <Header />
       <PlayerComponent />
+
+      <RandomKin />
+      <Button action={"random"} />
     </>
   );
 };
