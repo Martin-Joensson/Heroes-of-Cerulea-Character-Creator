@@ -9,32 +9,3 @@
       "geon": "You can spend 1 ENERGY to resist losing a HEART.",
       "aquarian": "You can spend 1 ENERGY to swim long distances underwater or attack while in water.",
       "seedling": "You can spend 1 ENERGY to turn invisible for as long as you stay still."
-    },
-    "hair": "Blond",
-    "clothes": "Green",
-    "stats": {
-      "might": 2,
-      "bravery": 3,
-      "insight": 1
-    },
-
-    "hearts": 3,
-    "energy": 3,
-    "inventory": {
-      "startWeapon": {
-        "elf": "Sword",
-        "avian": "Spear",
-        "geon": "Club",
-        "aquarian": "Trident",
-        "seedling": "Dagger"
-      },
-      "specialItem": "Lantern",
-      "space": 4,
-      "snacks": 0,
-      "meals": 0,
-      "keys": 0,
-      "gems": 15,
-      "trinity": 0
-    }
-  }
-}
