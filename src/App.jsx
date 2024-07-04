@@ -5,7 +5,6 @@ import "./assets/fonts/EnterCommand-Italic.ttf";
 import { PlayerComponent } from "./components/PlayerComponent";
 import { Header } from "./components/Sections/Header";
 import { Button } from "./components/Button";
-import { RandomCharacter } from "./components/Sections/RandomCharacter";
 import playerTemplate from "./components/data/characterTemplate.json";
 
 export const App = () => {
@@ -24,8 +23,6 @@ export const App = () => {
     <>
       <Header />
       <PlayerComponent hero={hero} setHero={setHero} />
-
-      <RandomCharacter />
       <Button action={"random"} hero={hero}  setHero={setHero} />
     </>
   );
