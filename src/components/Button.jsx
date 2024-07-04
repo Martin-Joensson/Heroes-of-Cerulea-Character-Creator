@@ -12,8 +12,7 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  const handleClick = (event) => {
-    console.log(event);
+  const handleClick = () => {
     let attributes = RandomAttributes();
 
     if (action === "random") {

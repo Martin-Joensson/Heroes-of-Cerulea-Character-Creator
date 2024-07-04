@@ -16,8 +16,6 @@ export const PlayerComponent = ({ hero, edit }) => {
     select3: player.stats.insight,
   });
 
-  console.log(edit);
-
   let special = player.special.elf;
   let startingWeapon = player.inventory.startWeapon.elf;
   let might = player.stats.might;
