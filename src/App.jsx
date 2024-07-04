@@ -9,7 +9,7 @@ import playerTemplate from "./components/data/characterTemplate.json";
 
 export const App = () => {
   const [hero, setHero] = useState({ playerTemplate });
-  console.log(hero)
+  const [edit, setEdit] = useState(false);
 
   // Function expression to handle the input change and update the 'name' state to showcase how reactive data works in React through the use of hooks
   const handleNameUpdate = () => {
@@ -22,8 +22,20 @@ export const App = () => {
   return (
     <>
       <Header />
-      <PlayerComponent hero={hero} setHero={setHero} />
-      <Button action={"random"} hero={hero}  setHero={setHero} />
+      <PlayerComponent hero={hero} setHero={setHero} edit={edit} />
+      <Button
+        action={"random"}
+        hero={hero}
+        setHero={setHero}
+        setEdit={setEdit}
+      />
+      <Button
+        action={"edit"}
+        hero={hero}
+        setHero={setHero}
+        edit={edit}
+        setEdit={setEdit}
+      />
     </>
   );
 };

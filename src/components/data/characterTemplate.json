@@ -22,11 +22,11 @@
     "energy": 3,
     "inventory": {
       "startWeapon": {
-              "elf": "Sword",
-      "avian": "Spear",
-      "geon": "Club",
-      "aquarian": "Trident",
-      "seedling": "Dagger"
+        "elf": "Sword",
+        "avian": "Spear",
+        "geon": "Club",
+        "aquarian": "Trident",
+        "seedling": "Dagger"
       },
       "specialItem": "Lantern",
       "space": 4,
