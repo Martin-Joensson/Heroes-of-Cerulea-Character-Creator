@@ -1,4 +1,4 @@
-import elf from "/images/elf.png";
+import elf from "/images/Elf.png";
 export const Header = () => {
   return (
     <div className="relative flex top-0 left-0 bg-cerulea-gold text-black w-full">

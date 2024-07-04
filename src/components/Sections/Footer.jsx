@@ -1,4 +1,4 @@
-import elf from "/images/elf.png";
+import elf from "/images/Elf.png";
 export const Footer = () => {
   return (
     <div className="absolute bottom-0 bg-cerulea-red text-text-light w-full">
