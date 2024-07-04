@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { RandomKin } from "./randomizers/RandomKin";
 import { RandomColor } from "./randomizers/RandomColor";
 import { RandomName } from "./randomizers/RandomName";
@@ -6,7 +8,6 @@ import { RandomAttributes } from "./randomizers/RandomAttributes";
 import playerTemplate from "../components/data/characterTemplate.json";
 
 export const Button = ({ action, setHero, edit, setEdit }) => {
-
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -35,10 +36,14 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
 
   return (
     <button className="no-print m-2" onClick={handleClick}>
-      {edit ? "Save" : <>
-        {capitalizeFirstLetter(action)}
-      </>}
- 
+      {edit ? "Save" : <>{capitalizeFirstLetter(action)}</>}
     </button>
   );
+};
+
+Button.propTypes = {
+  action: PropTypes.string,
+  setHero: PropTypes.func,
+  edit: PropTypes.bool,
+  setEdit: PropTypes.func,
 };
