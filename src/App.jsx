@@ -6,29 +6,25 @@ import { PlayerComponent } from "./components/PlayerComponent";
 import { Header } from "./components/Sections/Header";
 import { Button } from "./components/Button";
 import playerTemplate from "./components/data/characterTemplate.json";
+import { Footer } from "./components/Sections/Footer";
 
 export const App = () => {
   const [hero, setHero] = useState({ playerTemplate });
   const [edit, setEdit] = useState(false);
 
-  // Function expression to handle the input change and update the 'name' state to showcase how reactive data works in React through the use of hooks
-  const handleNameUpdate = () => {
-    const newName = prompt("Enter a new name:"); // Show an alert to receive a value from the user
-    if (newName) {
-      setHero.name(newName); // Update the name state with the new name if a value is provided
-    }
-  };
-
   return (
     <>
       <Header />
       <PlayerComponent hero={hero} setHero={setHero} edit={edit} />
-      <Button
-        action={"random"}
-        hero={hero}
-        setHero={setHero}
-        setEdit={setEdit}
-      />
+      {edit ? null : (
+        <Button
+          action={"random"}
+          hero={hero}
+          setHero={setHero}
+          setEdit={setEdit}
+        />
+      )}
+
       <Button
         action={"edit"}
         hero={hero}
@@ -36,6 +32,7 @@ export const App = () => {
         edit={edit}
         setEdit={setEdit}
       />
+      <Footer />
     </>
   );
 };

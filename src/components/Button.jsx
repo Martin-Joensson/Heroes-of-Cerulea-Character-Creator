@@ -6,6 +6,11 @@ import { RandomAttributes } from "./randomizers/RandomAttributes";
 import playerTemplate from "../components/data/characterTemplate.json";
 
 export const Button = ({ action, setHero, edit, setEdit }) => {
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   const handleClick = (event) => {
     console.log(event);
     let attributes = RandomAttributes();
@@ -30,7 +35,10 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
 
   return (
     <button className="no-print m-2" onClick={handleClick}>
-      Click me for {action}
+      {edit ? "Save" : <>
+        {capitalizeFirstLetter(action)}
+      </>}
+ 
     </button>
   );
 };
