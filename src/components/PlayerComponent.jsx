@@ -1,39 +1,14 @@
-export const PlayerComponent = () => {
-  const player = {
-    name: "Link",
-    player: "you",
-    kin: "Elf",
-    special: "You can spend 1 ENERGY ahead of an ACTION ROLL to get +1D.",
-    hair: "Blond",
-    clothes: "Green",
-    stats: 
-      {
-        might: 2,
-        bravery: 3,
-        insight: 1,
-      },
-    
-    hearts: 3,
-    energy: 3,
-    inventory: {
-      startWeapon: "Sword",
-      specialItem: "Lantern",
-      space: 4,
-      snacks: 0,
-      meals: 0,
-      keys: 0,
-      gems: 15,
-      trinity: 0,
-    },
-  };
+import playerTemplate from "../components/data/characterTemplate.json";
 
+export const PlayerComponent = (hero, setHero) => {
+  const { player } = hero.player || playerTemplate;
   console.log("Player componenet:", player);
+
   return (
-    <div className="border rounded-lg p-2 flex flex-col">
-      <h2 className="text-xl">My little Bio:</h2>
+    <div className="border rounded-lg p-2 flex flex-col items-center">
+      <h2 className="text-xl">Name: {player.name}</h2>
       <div className="grid grid-cols-2">
         <div className="leftColumn">
-          <p>Name: {player.name}</p>
           <p>Kin: {player.kin}</p>
           <p>Special: {player.special}</p>
           <p>Hair: {player.hair}</p>

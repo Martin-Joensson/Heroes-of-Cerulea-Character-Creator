@@ -16,11 +16,8 @@ export const RandomSpecialItem = () => {
         "Spend 1 ENERGY to make yourself invulnerable for the current and upcoming ROUND.",
     },
   ];
-  const randomSpecialItem = () => {
-    let randInt = Math.floor(Math.random() * specialItemSelection.length);
 
-    return specialItemSelection[randInt].itemName;
-  };
+  let randInt = Math.floor(Math.random() * specialItemSelection.length);
 
-  return <>{randomSpecialItem()}</>;
+  return specialItemSelection[randInt].itemName;
 };
