@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import playerTemplate from "../components/data/characterTemplate.json";
 
@@ -138,14 +139,14 @@ export const PlayerComponent = ({ hero, edit }) => {
 
   const preventDefault = (event) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <>
       {edit ? (
         <div className="border bg-cerulea-red text-text-light mx-auto mt-2 rounded-lg p-2 max-w-[450px] flex flex-col items-center">
           <h2 className="text-xl">
-            Name:{" "}
+            Name: {selectedName}
             <form onChange={changeName} onSubmit={preventDefault}>
               <input type="text" placeholder={player.name}></input>
             </form>
@@ -287,4 +288,9 @@ export const PlayerComponent = ({ hero, edit }) => {
       )}
     </>
   );
+};
+
+PlayerComponent.propTypes = {
+  hero: PropTypes.obj,
+  edit: PropTypes.bool,
 };
