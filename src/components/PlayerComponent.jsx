@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import playerTemplate from "../components/data/characterTemplate.json";
 
-export const PlayerComponent = ({ hero, edit }) => {
-  const { player } = hero.player || playerTemplate;
+export const PlayerComponent = ({ edit }) => {
+  const { player } = playerTemplate;
   const [selectedName, setSelectedName] = useState(player.name);
   const [selectedKin, setSelectedKin] = useState(player.kin);
   const [selectedHair, setSelectedHair] = useState(player.hair);
@@ -258,8 +258,8 @@ export const PlayerComponent = ({ hero, edit }) => {
         </div>
       ) : (
         <div className="border mx-auto mt-2 rounded-lg p-2 max-w-[450px] flex flex-col items-center">
-          <h2 className="text-xl">Name: {player.name}</h2>
-          <div className="grid grid-cols-2">
+          <h2 className="text-xl">Name: {selectedName}</h2>
+          <div className="flex flex-col tablet:grid tablet:grid-cols-2">
             <div className="leftColumn w-52 m-auto">
               <p>Kin: {player.kin}</p>
               <p>Special: {special}</p>
@@ -275,7 +275,7 @@ export const PlayerComponent = ({ hero, edit }) => {
               <p>Energy: {player.energy}</p>
             </div>
           </div>
-          <div className="bottomRow flex gap-4">
+          <div className="bottomRow flex flex-col tablet:flex-row gap-4">
             <p>Inventory: {player.inventory.space}</p>
             <p>Weapon: {startingWeapon}</p>
             <p>Special Item: {player.inventory.specialItem}</p>
@@ -291,6 +291,5 @@ export const PlayerComponent = ({ hero, edit }) => {
 };
 
 PlayerComponent.propTypes = {
-  hero: PropTypes.obj,
   edit: PropTypes.bool,
 };
