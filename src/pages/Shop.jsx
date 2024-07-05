@@ -1,3 +1,3 @@
 export const Shop = () => {
-  return <div>Shop</div>;
+  return <div className="min-h-full">Shop - Not ready yet</div>;
 };

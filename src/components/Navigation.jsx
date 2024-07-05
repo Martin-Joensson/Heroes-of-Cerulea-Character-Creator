@@ -1,45 +1,44 @@
 import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
-
   return (
     <div className="w-full flex flex-wrap bg-cerulea-gold mb-10">
-      <NavLink to="/">
+      <NavLink className="flex-grow bg-cerulea-blue" to="/">
         <button
           aria-label="Link to Character generator"
-          className="nav-button bg-cerulea-blue"
+          className="nav-button w-full "
         >
           Home
         </button>
       </NavLink>
-      <NavLink to="/character">
+      <NavLink className="flex-grow bg-cerulea-green" to="/character">
         <button
           aria-label="Link to Character generator"
-          className="nav-button bg-cerulea-green"
+          className="nav-button w-full "
         >
           Character Generator
         </button>
       </NavLink>
-      <NavLink to="/">
+      <NavLink className="flex-grow bg-cerulea-green" to="/monster">
         <button
           aria-label="Link to Character generator"
-          className="nav-button bg-cerulea-green"
+          className="nav-button flex-grow w-full "
         >
           Monster/Boss Generator
         </button>
       </NavLink>
-      <NavLink to="/">
+      <NavLink className="flex-grow bg-cerulea-green" to="/shop">
         <button
           aria-label="Link to Character generator"
-          className="nav-button bg-cerulea-green"
+          className="nav-button flex-grow w-full "
         >
           Shop/Treasure Generator
         </button>
       </NavLink>
-      <NavLink to="/">
+      <NavLink className="flex-grow bg-cerulea-green" to="/dungeon">
         <button
           aria-label="Link to Character generator"
-          className="nav-button bg-cerulea-green"
+          className="nav-button flex-grow w-full "
         >
           Dungeon Generator
         </button>

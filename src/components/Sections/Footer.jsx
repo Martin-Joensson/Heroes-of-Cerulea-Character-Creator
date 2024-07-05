@@ -1,8 +1,16 @@
 import elf from "/images/Elf.png";
 export const Footer = () => {
   return (
-    <div className="relative tablet:absolute tablet:bottom-0 bg-cerulea-blue text-text-light w-full">
-      <p className="">Fan created character creator for Heroes of Cerulea</p>
+    <div className="relative tablet:absolute tablet:bottom-0 mt-10 bg-cerulea-blue text-text-light w-full">
+      <p className="">
+        Fan created digital tools for{" "}
+        <a
+          className="font-enterCommandBold hover:opacity-50 active:opacity-25"
+          href="https://blackfiskforlag.com/produkter/heroes-of-cerulea/"
+        >
+          Heroes of Cerulea
+        </a>
+      </p>
       <p>
         {" "}
         Heroes of Cerulea is a creation of{" "}

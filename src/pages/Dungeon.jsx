@@ -1,3 +1,3 @@
 export const Dungeon = () => {
-  return <div>Dungeon</div>;
+  return <div>Dungeon - Not ready yet</div>;
 };

@@ -56,6 +56,10 @@ h2 {
 span {
   font-family: "Bold";
 }
+.active {
+  background-color: #d5b06a;
+  color: #000;
+}
 
 .nav-button {
   border: 1px solid transparent;
@@ -85,8 +89,13 @@ span {
   transition: border-color 0.25s;
 }
 .action-button:hover {
-  border-color: #646cff;
+  border-color: #fff;
 }
+
+.action-button:active {
+  border-color: #d5b06a;
+}
+
 .action-button:focus,
 .action-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

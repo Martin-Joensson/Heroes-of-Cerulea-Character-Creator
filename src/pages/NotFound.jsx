@@ -1,3 +1,7 @@
 export const NotFound = () => {
-  return <h2>NotFound</h2>;
+  return (
+    <div className="h-full">
+      <h2>NotFound</h2>
+    </div>
+  );
 };

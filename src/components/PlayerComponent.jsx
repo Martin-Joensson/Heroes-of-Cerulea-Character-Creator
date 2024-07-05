@@ -146,10 +146,10 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
     <>
       {edit ? (
         <>
-          <div className="border bg-cerulea-red text-text-light mx-auto mt-2 rounded-lg p-2 max-w-[500px] flex flex-col items-center">
+          <div className="border bg-cerulea-green text-text-light mx-auto mt-2 rounded-lg p-2 max-w-[500px] flex flex-col items-center">
             <h2 className="text-xl">
-              Name: {player.name}
               <form onChange={changeName} onSubmit={preventDefault}>
+                <label>Name: </label>
                 <input type="text" placeholder={player.name}></input>
               </form>
             </h2>
@@ -287,20 +287,40 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 <p>
                   <span className="text-cerulea-blue">Kin: </span> {player.kin}
                 </p>
-                <p>Special: {special}</p>
-                <p>Hair: {player.hair}</p>
-                <p>Clothes: {player.clothes}</p>
+                <p>
+                  <span className="text-cerulea-blue">Special:</span> {special}
+                </p>
+                <p>
+                  <span className="text-cerulea-blue">Hair:</span> {player.hair}
+                </p>
+                <p>
+                  <span className="text-cerulea-blue">Clothes:</span>{" "}
+                  {player.clothes}
+                </p>
               </div>
               <div className="rightColumn">
-                <p>Might: {might}</p>
-                <p>Bravery: {bravery}</p>
-                <p>Insight: {player.stats.insight}</p>
+                <p>
+                  <span className="text-cerulea-green">Might:</span> {might}
+                </p>
+                <p>
+                  <span className="text-cerulea-green">Bravery:</span> {bravery}
+                </p>
+                <p>
+                  <span className="text-cerulea-green">Insight:</span>{" "}
+                  {player.stats.insight}
+                </p>
                 <p>---</p>
-                <p>Hearts: {player.hearts}</p>
-                <p>Energy: {player.energy}</p>
+                <p>
+                  <span className="text-cerulea-red">Hearts:</span>{" "}
+                  {player.hearts}
+                </p>
+                <p>
+                  <span className="text-cerulea-gold">Energy:</span>{" "}
+                  {player.energy}
+                </p>
               </div>
             </div>
-            <div className="bottomRow flex flex-col tablet:flex-row gap-4">
+            <div className="bottomRow flex flex-col mt-4 tablet:flex-row tablet:gap-4">
               <p>Inventory: {player.inventory.space}</p>
               <p>Weapon: {startingWeapon}</p>
               <p>Special Item: {player.inventory.specialItem}</p>

@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import { Character } from "../pages/Character";
 import { Home } from "../pages/Home";
 import { NotFound } from "../pages/NotFound";
+import { Monster } from "../pages/Monster";
+import { Shop } from "../pages/Shop";
+import { Dungeon } from "../pages/Dungeon";
 
 export const CeruleaRoutes = ({ hero, setHero, edit, setEdit }) => {
   return (
@@ -20,6 +23,10 @@ export const CeruleaRoutes = ({ hero, setHero, edit, setEdit }) => {
           />
         }
       />
+      <Route path="/monster" element={<Monster />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/dungeon" element={<Dungeon />} />
+      <Route path="/*" element={<NotFound />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

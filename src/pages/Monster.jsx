@@ -1,6 +1,6 @@
 
 export const Monster = () => {
   return (
-    <div>Monster</div>
+    <div>Monster Generator - Not ready yet</div>
   )
 }
