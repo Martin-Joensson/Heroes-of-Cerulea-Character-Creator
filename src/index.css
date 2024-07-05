@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "EnterCommand";   /*Can be any text*/
+  font-family: "EnterCommand"; /*Can be any text*/
   src: local("EnterCommand"),
     url("./assets//fonts/EnterCommand.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Bold";   /*Can be any text*/
+  font-family: "Bold"; /*Can be any text*/
   src: local("EnterCommandBold"),
     url("./assets//fonts/EnterCommand-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Italic";   /*Can be any text*/
+  font-family: "Italic"; /*Can be any text*/
   src: local("EnterCommandItalic"),
     url("./assets/fonts/EnterCommand-Italic.ttf") format("truetype");
 }
@@ -38,21 +38,26 @@
 
 body {
   margin: 0;
-  /* display: flex;  */
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
+  font-family: "Bold";
   font-size: 2.2em;
   line-height: 1.1;
 }
 h2 {
+  font-family: "Bold";
   font-size: 1.8em;
   line-height: 1.1;
 }
 
-.nav-button{
+span {
+  font-family: "Bold";
+}
+
+.nav-button {
   border: 1px solid transparent;
   padding: 0.1em 0.5em;
   font-size: 1em;
@@ -62,7 +67,7 @@ h2 {
   transition: border-color 0.25s, background-color 0.25s;
 }
 
-.nav-button:hover{
+.nav-button:hover {
   background-color: #f7efcc;
   color: #000;
   border-color: #fff;
@@ -100,12 +105,11 @@ h2 {
   }
 }
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
 }
 
 /* APP Component CSS */

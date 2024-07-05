@@ -7,7 +7,7 @@ export const Home = () => {
       <p>Boss Generator</p>
       <p>Shop Generator</p>
       <p>Treasure Generator</p>
-      <p>Character Generator</p>
+      <p>Overworld Generator</p>
       <p>Dungeon Generator - with challenges</p>
     </div>
   );
