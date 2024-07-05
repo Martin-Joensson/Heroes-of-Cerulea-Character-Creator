@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Route, Routes } from "react-router-dom";
 
 import { Character } from "../pages/Character";
@@ -22,4 +23,11 @@ export const CeruleaRoutes = ({ hero, setHero, edit, setEdit }) => {
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
+};
+
+CeruleaRoutes.propTypes = {
+  hero: PropTypes.obj,
+  setHero: PropTypes.func,
+  edit: PropTypes.bool,
+  setEdit: PropTypes.func,
 };

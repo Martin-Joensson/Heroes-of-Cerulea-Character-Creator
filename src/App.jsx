@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./assets/fonts/EnterCommand.ttf";
 import "./assets/fonts/EnterCommand-Bold.ttf";
 import "./assets/fonts/EnterCommand-Italic.ttf";
-import { PlayerComponent } from "./components/PlayerComponent";
 import { Header } from "./components/Sections/Header";
 
 import playerTemplate from "./components/data/characterTemplate.json";

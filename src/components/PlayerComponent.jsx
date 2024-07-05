@@ -333,5 +333,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
 };
 
 PlayerComponent.propTypes = {
+  hero: PropTypes.obj,
+  setHero: PropTypes.func,
   edit: PropTypes.bool,
+  setEdit: PropTypes.func,
 };

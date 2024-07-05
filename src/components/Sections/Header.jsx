@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import elf from "/images/Elf.png";
 import group from "/images/Group.png";
 import logo from "/images/Logo.png";
 import { Navigation } from "../Navigation";

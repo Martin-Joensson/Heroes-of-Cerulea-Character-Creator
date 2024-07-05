@@ -1,7 +1,6 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="w-full flex flex-wrap bg-cerulea-gold mb-10">
