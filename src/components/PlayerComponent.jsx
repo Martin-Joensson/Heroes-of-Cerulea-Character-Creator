@@ -144,14 +144,14 @@ export const PlayerComponent = ({ edit }) => {
   return (
     <>
       {edit ? (
-        <div className="border bg-cerulea-red text-text-light mx-auto mt-2 rounded-lg p-2 max-w-[450px] flex flex-col items-center">
+        <div className="border bg-cerulea-red text-text-light mx-auto mt-2 rounded-lg p-2 max-w-[500px] flex flex-col items-center">
           <h2 className="text-xl">
-            Name: {selectedName}
+            Name: {player.name}
             <form onChange={changeName} onSubmit={preventDefault}>
               <input type="text" placeholder={player.name}></input>
             </form>
           </h2>
-          <div className="grid grid-cols-2">
+          <div className="flex flex-col tablet:grid tablet:grid-cols-2">
             <div className="leftColumn w-52 m-auto">
               <p>
                 Kin:{" "}
@@ -257,11 +257,13 @@ export const PlayerComponent = ({ edit }) => {
           </div>
         </div>
       ) : (
-        <div className="border mx-auto mt-2 rounded-lg p-2 max-w-[450px] flex flex-col items-center">
-          <h2 className="text-xl">Name: {selectedName}</h2>
+        <div className="border mx-auto mt-2 rounded-lg p-2 max-w-[500px] flex flex-col items-center">
+          <h2 className="text-xl">Name: {player.name}</h2>
           <div className="flex flex-col tablet:grid tablet:grid-cols-2">
             <div className="leftColumn w-52 m-auto">
-              <p>Kin: {player.kin}</p>
+              <p>
+                <span className="text-cerulea-blue">Kin: </span> {player.kin}
+              </p>
               <p>Special: {special}</p>
               <p>Hair: {player.hair}</p>
               <p>Clothes: {player.clothes}</p>
