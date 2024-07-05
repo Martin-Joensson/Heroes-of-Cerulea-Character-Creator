@@ -7,6 +7,7 @@ import { Header } from "./components/Sections/Header";
 import { Button } from "./components/Button";
 import playerTemplate from "./components/data/characterTemplate.json";
 import { Footer } from "./components/Sections/Footer";
+import { CeruleaRoutes } from "./routes/CeruleaRoutes";
 
 export const App = () => {
   const [hero, setHero] = useState({ playerTemplate });
@@ -15,6 +16,7 @@ export const App = () => {
   return (
     <>
       <Header />
+      <CeruleaRoutes />
       <PlayerComponent hero={hero} setHero={setHero} edit={edit} />
       {edit ? null : (
         <Button
