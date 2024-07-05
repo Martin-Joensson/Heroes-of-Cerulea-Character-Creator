@@ -68,8 +68,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
   if (player.kin === "Geon") {
     special = player.special.geon;
     startingWeapon = player.inventory.startWeapon.geon;
-    might = player.stats.might + 1;
-    bravery = player.stats.bravery - 1;
+    might = Number(player.stats.might) + 1;
+    bravery = Number(player.stats.bravery) - 1;
   }
   if (player.kin === "Avian") {
     special = player.special.avian;
@@ -82,8 +82,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
   if (player.kin === "Seedling") {
     special = player.special.seedling;
     startingWeapon = player.inventory.startWeapon.seedling;
-    might = player.stats.might - 1;
-    bravery = player.stats.bravery + 1;
+    might = Number(player.stats.might) - 1;
+    bravery = Number(player.stats.bravery) + 1;
   }
 
   const changeName = (event) => {
