@@ -1,9 +1,8 @@
 export const Home = () => {
   return (
-    <div>
-      Home
-      <h2>Apps for Heroes of Cerulea</h2>
-      <p>Character Generator</p>
+    <div className="w-2/3 m-auto">
+      <h2>Planned Apps for Heroes of Cerulea - they will unlock as they are finished.</h2>
+      <p className="text-cerulea-green">Character Generator</p>
       <p>Monster Generator - with monster reaction</p>
       <p>Boss Generator</p>
       <p>Shop Generator</p>

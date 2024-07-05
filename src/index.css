@@ -44,11 +44,31 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.8em;
   line-height: 1.1;
 }
 
-button {
+.nav-button{
+  border: 1px solid transparent;
+  padding: 0.1em 0.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.nav-button:hover{
+  background-color: #f7efcc;
+  color: #000;
+  border-color: #fff;
+}
+
+.action-button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -59,11 +79,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.action-button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.action-button:focus,
+.action-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -75,7 +95,7 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
+  .action-button {
     background-color: #f9f9f9;
   }
 }

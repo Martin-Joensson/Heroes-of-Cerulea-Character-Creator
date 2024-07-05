@@ -34,7 +34,7 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
   };
 
   return (
-    <button className="no-print m-2" onClick={handleClick}>
+    <button className="action-button no-print m-2" onClick={handleClick}>
       {edit ? "Save" : <>{capitalizeFirstLetter(action)}</>}
     </button>
   );
