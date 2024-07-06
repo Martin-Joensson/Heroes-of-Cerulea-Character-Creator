@@ -33,7 +33,7 @@ export const CeruleaRoutes = ({ hero, setHero, edit, setEdit }) => {
 };
 
 CeruleaRoutes.propTypes = {
-  hero: PropTypes.obj,
+  hero: PropTypes.any,
   setHero: PropTypes.func,
   edit: PropTypes.bool,
   setEdit: PropTypes.func,

@@ -26,11 +26,15 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
       setHero((playerTemplate.player.stats.might = attributes[0]));
       setHero((playerTemplate.player.stats.bravery = attributes[1]));
       setHero((playerTemplate.player.stats.insight = attributes[2]));
-      setHero((playerTemplate.player.inventory.gems = 15))
+      setHero((playerTemplate.player.inventory.gems = 15));
     }
 
     if (action === "edit") {
       setEdit(!edit);
+    }
+
+    if (action === "print") {
+      window.print();
     }
   };
 

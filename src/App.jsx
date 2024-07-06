@@ -15,7 +15,7 @@ export const App = () => {
   const [filledIcons, setFilledIcons] = useState(3);
 
   return (
-    <>
+    <div>
       <Header />
       <CeruleaRoutes
         hero={hero}
@@ -24,6 +24,6 @@ export const App = () => {
         setEdit={setEdit}
       />
       <Footer />
-    </>
+    </div>
   );
 };

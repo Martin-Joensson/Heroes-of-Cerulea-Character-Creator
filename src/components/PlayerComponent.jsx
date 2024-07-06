@@ -162,7 +162,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
             </h2>
             <div className="flex flex-col tablet:grid tablet:grid-cols-2">
               <div className="leftColumn w-52 m-auto">
-                <p>
+               <div>
                   Kin:{" "}
                   <select onChange={changeKin} value={selectedKin}>
                     {" "}
@@ -172,9 +172,9 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <p>Special: {special}</p>
-                <p>
+                </div>
+               <div>Special: {special}</div>
+               <div>
                   Hair:{" "}
                   <select onChange={changeHair} value={selectedHair}>
                     {" "}
@@ -184,8 +184,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <p>
+                </div>
+               <div>
                   Clothes:{" "}
                   <select onChange={changeClothes} value={selectedClothes}>
                     {" "}
@@ -195,10 +195,10 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
+                </div>
               </div>
               <div className="rightColumn">
-                <p>
+               <div>
                   Might:{" "}
                   <select
                     value={selectedAttributeValues.select1}
@@ -211,8 +211,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <p>
+                </div>
+               <div>
                   Bravery:{" "}
                   <select
                     value={selectedAttributeValues.select2}
@@ -225,8 +225,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <p>
+                </div>
+               <div>
                   Insight:{" "}
                   <select
                     value={selectedAttributeValues.select3}
@@ -239,18 +239,18 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                       </option>
                     ))}
                   </select>
-                </p>
-                <p>---</p>
-                <p>
+                </div>
+               <div>---</div>
+                <div>
                   Hearts:{" "}
                   <Container type="heart" edit={edit} filled={player.hearts} />
                   {player.hearts}
-                </p>
-                <p>
+                </div>
+                <div>
                   Energy:{" "}
                   <Container type="bolt" edit={edit} filled={player.energy} />
                   {player.energy}
-                </p>
+                </div>
               </div>
             </div>
             <div className="w-full justify-center">
@@ -287,7 +287,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
               </button>
             </div>
             <div className="bottomRow flex gap-4">
-              <p>
+              <div>
                 Snacks:{" "}
                 <div className="flex">
                   <button
@@ -304,8 +304,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     +
                   </button>{" "}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Keys:{" "}
                 <div className="flex">
                   <button
@@ -322,8 +322,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     +
                   </button>{" "}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Gems:{" "}
                 <div className="flex">
                   <button
@@ -340,8 +340,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     +
                   </button>{" "}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Trinity:{" "}
                 <div className="flex">
                   <button
@@ -358,7 +358,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     +
                   </button>{" "}
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           {edit ? null : (
@@ -411,16 +411,16 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                   {player.stats.insight}
                 </p>
 
-                <p>
+                <div>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
                   <Container type="heart" edit={edit} filled={player.hearts} />
                   {player.hearts}
-                </p>
-                <p>
+                </div>
+                <div>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
                   <Container type="bolt" edit={edit} filled={player.energy} />
                   {player.energy}
-                </p>
+                </div>
               </div>
             </div>
             <div className="w-full justify-center">
@@ -433,78 +433,78 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
               />
             </div>
             <div className="bottomRow flex flex-col mt-4 tablet:flex-row tablet:gap-4">
-              <p>
+              <div>
                 Snacks:{" "}
-                <div className="flex">
-                  <button
+                <div className="flex justify-center">
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setSnacks(snacks - 1)}
                   >
                     -
-                  </button>{" "}
+                  </button>{" "} */}
                   {snacks}
-                  <button
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setSnacks(snacks + 1)}
                   >
                     +
-                  </button>{" "}
+                  </button>{" "} */}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Keys:{" "}
-                <div className="flex">
-                  <button
+                <div className="flex justify-center">
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setKeys(keys - 1)}
                   >
                     -
-                  </button>{" "}
+                  </button>{" "} */}
                   {keys}
-                  <button
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setKeys(keys + 1)}
                   >
                     +
-                  </button>{" "}
+                  </button>{" "} */}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Gems:{" "}
-                <div className="flex">
-                  <button
+                <div className="flex justify-center">
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setGems(gems - 1)}
                   >
                     -
-                  </button>{" "}
+                  </button>{" "} */}
                   {gems}
-                  <button
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setGems(gems + 1)}
                   >
                     +
-                  </button>{" "}
+                  </button>{" "} */}
                 </div>
-              </p>
-              <p>
+              </div>
+              <div>
                 Trinity:{" "}
-                <div className="flex">
-                  <button
+                <div className="flex justify-center">
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setTrinity(trinity - 1)}
                   >
                     -
-                  </button>{" "}
+                  </button>{" "} */}
                   {trinity}
-                  <button
+                  {/* <button
                     className="hover:opacity-50 w-4"
                     onClick={() => setTrinity(trinity + 1)}
                   >
                     +
-                  </button>{" "}
+                  </button>{" "} */}
                 </div>
-              </p>
+              </div>
             </div>
           </div>
           {edit ? null : (
@@ -523,6 +523,13 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
             edit={edit}
             setEdit={setEdit}
           />
+          <Button
+            action={"print"}
+            hero={hero}
+            setHero={setHero}
+            edit={edit}
+            setEdit={setEdit}
+          />
         </>
       )}
     </>
@@ -530,7 +537,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
 };
 
 PlayerComponent.propTypes = {
-  hero: PropTypes.obj,
+  hero: PropTypes.any,
   setHero: PropTypes.func,
   edit: PropTypes.bool,
   setEdit: PropTypes.func,

@@ -13,7 +13,7 @@ export const Character = ({ hero, setHero, edit, setEdit }) => {
 };
 
 Character.propTypes = {
-  hero: PropTypes.obj,
+  hero: PropTypes.any,
   setHero: PropTypes.func,
   edit: PropTypes.bool,
   setEdit: PropTypes.func,

@@ -1,3 +1,10 @@
+import { GeneralItem } from "../components/GeneralItem";
+
 export const Shop = () => {
-  return <div className="min-h-full">Shop - Not ready yet</div>;
+  return (
+    <div className="">
+      Shop - Not ready yet
+      <GeneralItem />
+    </div>
+  );
 };
