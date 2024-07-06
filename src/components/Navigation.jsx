@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
   return (
-    <div className="w-full flex flex-wrap bg-cerulea-gold mb-10">
+    <div className="w-full no-print flex flex-wrap bg-cerulea-gold mb-10">
       <NavLink className="flex-grow bg-cerulea-blue" to="/">
         <button
           aria-label="Link to Character generator"
@@ -19,7 +19,7 @@ export const Navigation = () => {
           Character Generator
         </button>
       </NavLink>
-      <NavLink className="flex-grow bg-cerulea-green" to="/monster">
+      <NavLink className="hidden flex-grow bg-cerulea-green" to="/monster">
         <button
           aria-label="Link to Character generator"
           className="nav-button flex-grow w-full "
@@ -27,7 +27,7 @@ export const Navigation = () => {
           Monster/Boss Generator
         </button>
       </NavLink>
-      <NavLink className="flex-grow bg-cerulea-green" to="/shop">
+      <NavLink className="hidden flex-grow bg-cerulea-green" to="/shop">
         <button
           aria-label="Link to Character generator"
           className="nav-button flex-grow w-full "
@@ -35,7 +35,7 @@ export const Navigation = () => {
           Shop/Treasure Generator
         </button>
       </NavLink>
-      <NavLink className="flex-grow bg-cerulea-green" to="/dungeon">
+      <NavLink className="hidden flex-grow bg-cerulea-green" to="/dungeon">
         <button
           aria-label="Link to Character generator"
           className="nav-button flex-grow w-full "

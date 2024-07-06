@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import playerTemplate from "../components/data/characterTemplate.json";
 import { Button } from "../components/Button";
+import { Container } from "./Container";
+import { Inventory } from "./Inventory";
 
 export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
   const { player } = playerTemplate;
@@ -17,6 +19,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
     select2: player.stats.bravery,
     select3: player.stats.insight,
   });
+    const [largePouch, setLargePouch] = useState(false);
 
   let special = player.special.elf;
   let startingWeapon = player.inventory.startWeapon.elf;
@@ -234,9 +237,26 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                   </select>
                 </p>
                 <p>---</p>
-                <p>Hearts: {player.hearts}</p>
-                <p>Energy: {player.energy}</p>
+                <p>
+                  Hearts:{" "}
+                  <Container type="heart" edit={edit} filled={player.hearts} />
+                  {player.hearts}
+                </p>
+                <p>
+                  Energy:{" "}
+                  <Container type="bolt" edit={edit} filled={player.energy} />
+                  {player.energy}
+                </p>
               </div>
+            </div>
+            <div className="w-full justify-center">
+              {" "}
+              <Inventory
+                largePouch={largePouch}
+                size={player.inventory.space}
+                slot1={startingWeapon}
+                slot2={player.inventory.specialItem}
+              />
             </div>
             <div className="bottomRow flex gap-4">
               <p>Inventory: {player.inventory.space}</p>
@@ -290,6 +310,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 <p>
                   <span className="text-cerulea-blue">Special:</span> {special}
                 </p>
+                <p>---</p>
                 <p>
                   <span className="text-cerulea-blue">Hair:</span> {player.hair}
                 </p>
@@ -309,16 +330,27 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                   <span className="text-cerulea-green">Insight:</span>{" "}
                   {player.stats.insight}
                 </p>
-                <p>---</p>
+
                 <p>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
+                  <Container type="heart" edit={edit} filled={player.hearts} />
                   {player.hearts}
                 </p>
                 <p>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
+                  <Container type="bolt" edit={edit} filled={player.energy} />
                   {player.energy}
                 </p>
               </div>
+            </div>
+            <div className="w-full justify-center">
+              {" "}
+              <Inventory
+                largePouch={largePouch}
+                size={player.inventory.space}
+                slot1={startingWeapon}
+                slot2={player.inventory.specialItem}
+              />
             </div>
             <div className="bottomRow flex flex-col mt-4 tablet:flex-row tablet:gap-4">
               <p>Inventory: {player.inventory.space}</p>

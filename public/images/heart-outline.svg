@@ -3,7 +3,7 @@
    viewBox="0 0 522 447.84863"
    version="1.1"
    id="svg1"
-   sodipodi:docname="heart-solid.svg"
+   sodipodi:docname="heart-outline.svg"
    width="522"
    height="447.84863"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
@@ -36,5 +36,5 @@
      fill="#b31b2e"
      d="m 52.6,263.24865 180.7,168.7 c 7.5,7 17.4,10.9 27.7,10.9 10.3,0 20.2,-3.9 27.7,-10.9 l 180.7,-168.7 c 30.4,-28.3 47.6,-68 47.6,-109.5 v -5.8 C 517,78.048647 466.5,18.448647 397.6,6.9486473 352,-0.65135266 305.6,14.248647 273,46.848647 l -12,12 -12,-12 C 216.4,14.248647 170,-0.65135266 124.4,6.9486473 55.5,18.448647 5,78.048647 5,147.94865 v 5.8 c 0,41.5 17.2,81.2 47.6,109.5 z"
      id="path1"
-     style="stroke:#000000;stroke-width:10;stroke-dasharray:none;stroke-opacity:1" />
+     style="stroke:#000000;stroke-width:10;stroke-dasharray:none;stroke-opacity:1;fill:#ffffff;fill-opacity:0.49800798" />
 </svg>

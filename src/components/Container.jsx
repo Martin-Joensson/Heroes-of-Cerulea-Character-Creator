@@ -1,26 +1,39 @@
+import { useState } from "react";
 import heart from "/images/heart-solid.svg";
-import bolt from "/images/bolt-lightning-solid.svg";
+import bolt from "/images/bolt-lightning-solid2.svg";
+import heartOutline from "/images/heart-outline.svg";
+import boltOutline from "/images/bolt-lightning-outline.svg";
+import { Icons } from "./Icons";
 
-export const Container = (type, filled) => {
-  console.log("Container type:", type);
-
-  console.log("Containers to be filled:", filled);
-
+export const Container = ({ type, edit, filled }) => {
+  const [filledIcons, setFilledIcons] = useState(filled);
   const containerLength = 12;
 
-  const iconClass = "w-2 h-2";
-
-    const populate = (icon) => {
-        for (let runs = 0; runs < containerLength; runs++){
-          <img className={iconClass} src={icon} />
-        }
-    }
   return (
-    <div className="flex">
-          Container
-        {populate(heart)}
-      <img className={iconClass} src={heart} />
-      <img className={iconClass} src={bolt} />
-    </div>
+    <>
+      <div className="flex justify-center">
+        {edit ? (
+          <button
+            className="hover:opacity-50 w-4"
+            onClick={() => setFilledIcons(filledIcons - 1)}
+          >
+            -
+          </button>
+        ) : null}
+        <div className="w-20 grid grid-cols-6 gap-0">
+          {Array.from({ length: containerLength }, (_, index) => (
+            <Icons key={index} icon={type} filled={index < filledIcons} />
+          ))}
+        </div>
+        {edit ? (
+          <button
+            className="hover:opacity-50 w-4"
+            onClick={() => setFilledIcons(filledIcons + 1)}
+          >
+            +
+          </button>
+        ) : null}
+      </div>
+    </>
   );
 };

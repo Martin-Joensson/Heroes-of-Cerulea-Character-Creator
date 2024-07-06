@@ -12,11 +12,11 @@ import { Container } from "./components/Container";
 export const App = () => {
   const [hero, setHero] = useState({ playerTemplate });
   const [edit, setEdit] = useState(false);
+  const [filledIcons, setFilledIcons] = useState(3);
 
   return (
     <>
       <Header />
-      <Container />
       <CeruleaRoutes
         hero={hero}
         setHero={setHero}
