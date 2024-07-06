@@ -19,7 +19,11 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
     select2: player.stats.bravery,
     select3: player.stats.insight,
   });
-    const [largePouch, setLargePouch] = useState(false);
+  const [largePouch, setLargePouch] = useState(false);
+  const [snacks, setSnacks] = useState(player.inventory.snacks);
+  const [keys, setKeys] = useState(player.inventory.keys);
+  const [gems, setGems] = useState(player.inventory.gems);
+  const [trinity, setTrinity] = useState(player.inventory.trinity);
 
   let special = player.special.elf;
   let startingWeapon = player.inventory.startWeapon.elf;
@@ -255,30 +259,106 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 largePouch={largePouch}
                 size={player.inventory.space}
                 slot1={startingWeapon}
-                slot2={player.inventory.specialItem}
+                slot2={
+                  <select
+                    onChange={changeSpecialItem}
+                    value={selectedSpecialItem}
+                  >
+                    {" "}
+                    {specialItemSelection.map((item) => (
+                      <option key={item.itemName} value={item.itemName}>
+                        {item.itemName}
+                      </option>
+                    ))}
+                  </select>
+                }
+                // slot3={
+                //   <form onChange={changeName} onSubmit={preventDefault}>
+                //     <label>Name: </label>
+                //     <input type="text" placeholder={player.name}></input>
+                //   </form>
+                // }
               />
+              <button
+                className="bg-[#242424] p-2"
+                onClick={() => setLargePouch(!largePouch)}
+              >
+                {largePouch ? "Remove large pouch?" : "Add large pouch?"}
+              </button>
             </div>
             <div className="bottomRow flex gap-4">
-              <p>Inventory: {player.inventory.space}</p>
-              <p>Weapon: {startingWeapon}</p>
               <p>
-                Special Item:{" "}
-                <select
-                  onChange={changeSpecialItem}
-                  value={selectedSpecialItem}
-                >
-                  {" "}
-                  {specialItemSelection.map((item) => (
-                    <option key={item.itemName} value={item.itemName}>
-                      {item.itemName}
-                    </option>
-                  ))}
-                </select>
+                Snacks:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setSnacks(snacks - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {snacks}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setSnacks(snacks + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
               </p>
-              <p>Snacks: {player.inventory.snacks}</p>
-              <p>Keys: {player.inventory.keys}</p>
-              <p>Gems: {player.inventory.gems}</p>
-              <p>Trinity: {player.inventory.trinity}</p>
+              <p>
+                Keys:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setKeys(keys - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {keys}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setkeys(keys + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
+              <p>
+                Gems:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setGems(gems - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {gems}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setGems(gems + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
+              <p>
+                Trinity:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setTrinity(trinity - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {trinity}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setTrinity(trinity + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
             </div>
           </div>
           {edit ? null : (
@@ -353,13 +433,78 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
               />
             </div>
             <div className="bottomRow flex flex-col mt-4 tablet:flex-row tablet:gap-4">
-              <p>Inventory: {player.inventory.space}</p>
-              <p>Weapon: {startingWeapon}</p>
-              <p>Special Item: {player.inventory.specialItem}</p>
-              <p>Snacks: {player.inventory.snacks}</p>
-              <p>Keys: {player.inventory.keys}</p>
-              <p>Gems: {player.inventory.gems}</p>
-              <p>Trinity: {player.inventory.trinity}</p>
+              <p>
+                Snacks:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setSnacks(snacks - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {snacks}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setSnacks(snacks + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
+              <p>
+                Keys:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setKeys(keys - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {keys}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setkeys(keys + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
+              <p>
+                Gems:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setGems(gems - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {gems}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setGems(gems + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
+              <p>
+                Trinity:{" "}
+                <div className="flex">
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setTrinity(trinity - 1)}
+                  >
+                    -
+                  </button>{" "}
+                  {trinity}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setTrinity(trinity + 1)}
+                  >
+                    +
+                  </button>{" "}
+                </div>
+              </p>
             </div>
           </div>
           {edit ? null : (
