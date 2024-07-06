@@ -317,7 +317,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                   {keys}
                   <button
                     className="hover:opacity-50 w-4"
-                    onClick={() => setkeys(keys + 1)}
+                    onClick={() => setKeys(keys + 1)}
                   >
                     +
                   </button>{" "}
@@ -463,7 +463,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                   {keys}
                   <button
                     className="hover:opacity-50 w-4"
-                    onClick={() => setkeys(keys + 1)}
+                    onClick={() => setKeys(keys + 1)}
                   >
                     +
                   </button>{" "}
