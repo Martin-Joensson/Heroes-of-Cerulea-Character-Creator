@@ -2,7 +2,7 @@ export const Home = () => {
   return (
     <div className="w-2/3 m-auto">
       <h2>
-        Planned Apps for Heroes of Cerulea - they will unlock as they are
+        Tools for Heroes of Cerulea - they will unlock as they are
         finished.
       </h2>
       <div className="flex flex-col tablet:flex-row tablet:gap-10 justify-center my-4">
