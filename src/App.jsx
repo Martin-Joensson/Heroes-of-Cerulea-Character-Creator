@@ -10,21 +10,22 @@ import { CeruleaRoutes } from "./routes/CeruleaRoutes";
 import { Container } from "./components/Container";
 
 export const App = () => {
-  const player =  playerTemplate.player ;
-  const [hero, setHero] = useState( player );
+  const player = playerTemplate.player;
+  const [hero, setHero] = useState(player);
   const [edit, setEdit] = useState(false);
   const [filledIcons, setFilledIcons] = useState(3);
 
-
   return (
-    <div>
-      <Header />
-      <CeruleaRoutes
-        hero={hero}
-        setHero={setHero}
-        edit={edit}
-        setEdit={setEdit}
-      />
+    <div className="relative min-h-[100vh] ">
+      <div className="pb-28">
+        <Header />
+        <CeruleaRoutes
+          hero={hero}
+          setHero={setHero}
+          edit={edit}
+          setEdit={setEdit}
+        />
+      </div>
       <Footer />
     </div>
   );

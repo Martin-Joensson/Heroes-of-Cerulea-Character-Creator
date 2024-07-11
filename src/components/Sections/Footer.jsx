@@ -1,7 +1,7 @@
 import elf from "/images/Elf.png";
 export const Footer = () => {
   return (
-    <div className="relative tablet:absolute tablet:bottom-0 mt-10 bg-cerulea-blue text-text-light w-full">
+    <div className="absolute bottom-0 h-20 bg-cerulea-blue text-text-light w-full">
       <p className="">
         Fan created digital tools for{" "}
         <a
