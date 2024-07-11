@@ -1,4 +1,4 @@
- <img src="/public/images/heroes-gold.png" alt="Project Banner Image">
+ <img src="/public/images/heroes.png" alt="Project Banner Image">
 
 # Tools for Heroes of Cerulea
 
