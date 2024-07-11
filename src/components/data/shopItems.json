@@ -1,0 +1,64 @@
+{
+  "shopItems": [
+    {
+      "name": "Snack",
+      "description": "Restores 1 HEART and 1 ENERGY when consumed.",
+      "price": 5,
+      "DD": 11
+    },
+    {
+      "name": "Meal",
+      "description": "Restores 3 HEARTS and 3 ENERGY when consumed.",
+      "price": 10,
+      "DD": 13
+    },
+    {
+      "name": "Bomb",
+      "description": "Can blow things up or deplete 2 monster HEARTS.",
+      "price": 5,
+      "DD": 21
+    },
+    {
+      "name": "Energy Potion",
+      "description": "Restores all ENERGY. Must be consumed immediately or stored in a bottle.",
+      "price": 20,
+      "DD": 22
+    },
+    {
+      "name": "Heart Potion",
+      "description": "Restores all HEARTS. Must be consumed immediately or stored in a bottle.",
+      "price": 30,
+      "DD": 23
+    },
+    {
+      "name": "Pixie",
+      "description": "Restores all HEARTS. If stored in a bottle, it activates automatically when the hero goes unconscious.",
+      "price": 40,
+      "DD": 24
+    },
+    {
+      "name": "Vitality Potion",
+      "description": "Restores all HEARTS and ENERGY. Must be consumed immediately or stored in a bottle.",
+      "price": 50,
+      "DD": 31
+    },
+    {
+      "name": "Bottle",
+      "description": "Can store a potion, bug or pixie.",
+      "price": 120,
+      "DD": 32
+    },
+    {
+      "name": "Energy Container",
+      "description": "Increases one hero's maximum ENERGY by 1 and restores all ENERGY.",
+      "price": 100,
+      "DD": 33
+    },
+    {
+      "name": "Heart Container",
+      "description": "Increases one hero's maximum HEARTS by 1 and restores all HEARTS.",
+      "price": 150,
+      "DD": 34
+    }
+  ]
+}

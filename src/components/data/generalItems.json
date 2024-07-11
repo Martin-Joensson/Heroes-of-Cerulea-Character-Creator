@@ -1,0 +1,100 @@
+{
+  "generalItems": [
+    {
+      "name": "Particular key",
+      "description": "Only opens a particular lock. Doesn't have to be an actual key or an actual lock.",
+      "price": 110,
+      "DD": 11
+    },
+    {
+      "name": "Bottle",
+      "description": "Can hold a potion, bug, or pixie.",
+      "price": 120,
+      "DD": 12
+    },
+    {
+      "name": "Power Bracelet",
+      "description": "+1D for non-combat strength rolls.",
+      "price": 130,
+      "DD": 13
+    },
+    {
+      "name": "Hero's Shield",
+      "description": "+1D for DEFEND rolls.",
+      "price": 140,
+      "DD": 14
+    },
+    {
+      "name": "Dowsing Rod",
+      "description": "Vibrates in rooms where something is hidden.",
+      "price": 210,
+      "DD": 21
+    },
+    {
+      "name": "Magic Flute",
+      "description": "The user can summon a portal to the closest town. The portal stays open until heroes travel back through it. If a new portal opens, the previous portal closes.",
+      "price": 220,
+      "DD": 22
+    },
+    {
+      "name": "Large Pouch",
+      "description": "Grants a total of 8 inventory slots. Replaces a small pouch.",
+      "price": 230,
+      "DD": 23
+    },
+    {
+      "name": "Hero's Tunic",
+      "description": "+1D for non-combat acrobatic rolls.",
+      "price": 240,
+      "DD": 24
+    },
+    {
+      "name": "Shock Ring",
+      "description": "Grants immunity to electricity.",
+      "price": 310,
+      "DD": 31
+    },
+    {
+      "name": "Frost Ring",
+      "description": "Grants immunity to cold.",
+      "price": 320,
+      "DD": 32
+    },
+    {
+      "name": "Flame Ring",
+      "description": "Grants immunity to fire.",
+      "price": 330,
+      "DD": 33
+    },
+    {
+      "name": "Hero's Bow",
+      "description": "+1D for ranged ATTACK rolls. Unlimited arrows.",
+      "price": 340,
+      "DD": 34
+    },
+    {
+      "name": "Hero's Sword",
+      "description": "+1D for melee ATTACK rolls.",
+      "price": 410,
+      "DD": 41
+    },
+    {
+      "name": "Hero's Armor",
+      "description": "Any time the wearer would lose a HEART, they lose half a HEART instead. (Use a pen to draw lines down the middle of your HEART symbols).",
+      "price": 420,
+      "DD": 42
+    },
+    {
+      "name": "Big Sword",
+      "description": "Successful attacks deplete 2 monster HEARTS.",
+      "price": 430,
+      "DD": 43
+    },
+    {
+      "name": "Monster Mask",
+      "description": "Monsters (but not bosses) ignore the wearer as long as the wearer doesn’t attack.",
+      "price": 440,
+      "DD": 44
+    }
+  ]
+}

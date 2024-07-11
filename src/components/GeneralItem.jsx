@@ -4,6 +4,7 @@ export const GeneralItem = () => {
       name: "Particular key",
       description:
         "Only opens a particular lock. Doesn't have to be an actual key or an actual lock.",
+      price: "110 gems",
     },
     {
       name: "Bottle",
@@ -78,6 +79,7 @@ export const GeneralItem = () => {
           <div className="border p-2 m-2" key={index}>
             <p className="font-enterCommandBold"> {item.name}</p>
             <p className="leading-none">{item.description}</p>
+            <p>{item.price}</p>
           </div>
         ))}
       </div>
