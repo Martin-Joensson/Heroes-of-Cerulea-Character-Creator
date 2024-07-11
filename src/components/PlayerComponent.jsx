@@ -8,8 +8,6 @@ import { Inventory } from "./Inventory";
 export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
  
   const  player  =  hero ;
-  console.log("Player: ", player);
-  console.log("Hero:", hero)
   const [selectedName, setSelectedName] = useState(player.name);
   const [selectedKin, setSelectedKin] = useState(player.kin);
   const [selectedHair, setSelectedHair] = useState(player.hair);
