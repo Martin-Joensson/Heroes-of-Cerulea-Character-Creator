@@ -433,12 +433,12 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 <div>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
                   <Container type="heart" edit={edit} filled={player.hearts} />
-                  {player.hearts}
+                  Max {player.hearts}
                 </div>
                 <div>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
                   <Container type="bolt" edit={edit} filled={player.energy} />
-                  {player.energy}
+                  Max {player.energy}
                 </div>
               </div>
             </div>
