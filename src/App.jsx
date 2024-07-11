@@ -10,9 +10,11 @@ import { CeruleaRoutes } from "./routes/CeruleaRoutes";
 import { Container } from "./components/Container";
 
 export const App = () => {
-  const [hero, setHero] = useState({ playerTemplate });
+  const player =  playerTemplate.player ;
+  const [hero, setHero] = useState( player );
   const [edit, setEdit] = useState(false);
   const [filledIcons, setFilledIcons] = useState(3);
+
 
   return (
     <div>

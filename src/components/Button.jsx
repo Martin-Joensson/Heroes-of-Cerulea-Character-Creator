@@ -15,18 +15,33 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
   const handleClick = () => {
     let attributes = RandomAttributes();
 
+    const updateHeroProperty = (key, value) => {
+      setHero((prevHero) => ({
+        ...prevHero,
+        [key]: value,
+      }));
+    };
+
+    const updateHeroNestedProperty = (key, subKey, value) => {
+      setHero((prevHero) => ({
+        ...prevHero,
+        [key]: {
+          ...prevHero[key],
+          [subKey]: value,
+        },
+      }));
+    };
+
     if (action === "random") {
-      setHero((playerTemplate.player.name = RandomName()));
-      setHero((playerTemplate.player.kin = RandomKin()));
-      setHero((playerTemplate.player.hair = RandomColor()));
-      setHero((playerTemplate.player.clothes = RandomColor()));
-      setHero(
-        (playerTemplate.player.inventory.specialItem = RandomSpecialItem())
-      );
-      setHero((playerTemplate.player.stats.might = attributes[0]));
-      setHero((playerTemplate.player.stats.bravery = attributes[1]));
-      setHero((playerTemplate.player.stats.insight = attributes[2]));
-      setHero((playerTemplate.player.inventory.gems = 15));
+      updateHeroProperty("name", RandomName());
+      updateHeroProperty("kin", RandomKin());
+      updateHeroProperty("hair", RandomColor());
+      updateHeroProperty("clothes", RandomColor());
+      updateHeroNestedProperty("inventory", "specialItem", RandomSpecialItem());
+      updateHeroNestedProperty("stats", "might", attributes[0]);
+      updateHeroNestedProperty("stats", "bravery", attributes[1]);
+      updateHeroNestedProperty("stats", "insight", attributes[2]);
+      updateHeroNestedProperty("inventory", "gems", 15);
     }
 
     if (action === "edit") {

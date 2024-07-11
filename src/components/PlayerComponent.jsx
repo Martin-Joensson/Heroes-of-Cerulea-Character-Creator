@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import playerTemplate from "../components/data/characterTemplate.json";
 import { Button } from "../components/Button";
 import { Container } from "./Container";
 import { Inventory } from "./Inventory";
 
 export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
-  const { player } = playerTemplate;
+ 
+  const  player  =  hero ;
+  console.log("Player: ", player);
+  console.log("Hero:", hero)
   const [selectedName, setSelectedName] = useState(player.name);
   const [selectedKin, setSelectedKin] = useState(player.kin);
   const [selectedHair, setSelectedHair] = useState(player.hair);
@@ -24,6 +27,24 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
   const [keys, setKeys] = useState(player.inventory.keys);
   const [gems, setGems] = useState(player.inventory.gems);
   const [trinity, setTrinity] = useState(player.inventory.trinity);
+
+  useEffect(() => {
+    setSelectedName(hero.name);
+    setSelectedKin(hero.kin);
+    setSelectedHair(hero.hair);
+    setSelectedClothes(hero.clothes);
+    setSelectedSpecialItem(hero.inventory.specialItem);
+    setSelectedAttributeValues({
+      select1: hero.stats.might,
+      select2: hero.stats.bravery,
+      select3: hero.stats.insight,
+    });
+    setLargePouch(false);
+    setSnacks(hero.inventory.snacks);
+    setKeys(hero.inventory.keys);
+    setGems(hero.inventory.gems);
+    setTrinity(hero.inventory.trinity);
+  }, [hero]);
 
   let special = player.special.elf;
   let startingWeapon = player.inventory.startWeapon.elf;
@@ -162,7 +183,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
             </h2>
             <div className="flex flex-col tablet:grid tablet:grid-cols-2">
               <div className="leftColumn w-52 m-auto">
-               <div>
+                <div>
                   Kin:{" "}
                   <select onChange={changeKin} value={selectedKin}>
                     {" "}
@@ -173,8 +194,8 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 </div>
-               <div>Special: {special}</div>
-               <div>
+                <div>Special: {special}</div>
+                <div>
                   Hair:{" "}
                   <select onChange={changeHair} value={selectedHair}>
                     {" "}
@@ -185,7 +206,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 </div>
-               <div>
+                <div>
                   Clothes:{" "}
                   <select onChange={changeClothes} value={selectedClothes}>
                     {" "}
@@ -198,7 +219,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 </div>
               </div>
               <div className="rightColumn">
-               <div>
+                <div>
                   Might:{" "}
                   <select
                     value={selectedAttributeValues.select1}
@@ -212,7 +233,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 </div>
-               <div>
+                <div>
                   Bravery:{" "}
                   <select
                     value={selectedAttributeValues.select2}
@@ -226,7 +247,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 </div>
-               <div>
+                <div>
                   Insight:{" "}
                   <select
                     value={selectedAttributeValues.select3}
@@ -240,7 +261,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 </div>
-               <div>---</div>
+                <div>---</div>
                 <div>
                   Hearts:{" "}
                   <Container type="heart" edit={edit} filled={player.hearts} />
