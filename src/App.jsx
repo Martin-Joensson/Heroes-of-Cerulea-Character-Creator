@@ -17,7 +17,7 @@ export const App = () => {
 
   return (
     <div className="relative min-h-[100vh] ">
-      <div className="pb-28">
+      <div className="pb-40">
         <Header />
         <CeruleaRoutes
           hero={hero}

@@ -1,7 +1,10 @@
 import elf from "/images/Elf.png";
+import git from "/images/github-mark.svg";
+import portfolio from "/images/briefcase-solid.svg";
+
 export const Footer = () => {
   return (
-    <div className="absolute bottom-0 h-20 bg-cerulea-blue text-text-light w-full">
+    <div className="absolute bottom-0 bg-cerulea-blue text-text-light w-full">
       <p className="">
         Fan created digital tools for{" "}
         <a
@@ -22,6 +25,14 @@ export const Footer = () => {
         </a>
       </p>
       <p>&copy; 2024</p>
+      <div className="flex gap-2 justify-center my-4">
+        <a href="https://github.com/Martin-Joensson/Heroes-of-Cerulea-Character-Creator">
+          <img src={git} className="w-4 h-4 m-auto" />
+        </a>
+        <a href="https://martin-joensson-portfolio.netlify.app/">
+          <img src={portfolio} className="w-4 h-4 m-auto" />
+        </a>
+      </div>
       <img
         src={elf}
         alt="elf"
