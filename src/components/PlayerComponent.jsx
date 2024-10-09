@@ -336,12 +336,12 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     ))}
                   </select>
                 }
-                // slot3={
-                //   <form onChange={changeName} onSubmit={preventDefault}>
-                //     <label>Name: </label>
-                //     <input type="text" placeholder={player.name}></input>
-                //   </form>
-                // }
+                slot3={
+                  <form onChange={changeName} onSubmit={preventDefault}>
+                    <label> Add item: </label>
+                    <input type="text" placeholder={player.name}></input>
+                  </form>
+                }
               />
               <button
                 className="bg-[#242424] p-2"
@@ -477,13 +477,15 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
 
                 <div>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
-                  <Container
-                    type="heart"
-                    edit={edit}
-                    filled={hearts}
-                    containerLength={maxHearts}
-                  />
-                  Max {maxHearts}
+                  <div>
+                    <Container
+                      type="heart"
+                      edit={edit}
+                      filled={hearts}
+                      setFilled={setHearts}
+                      containerLength={maxHearts}
+                    />
+                  </div>
                 </div>
                 <div>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
@@ -491,9 +493,9 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     type="bolt"
                     edit={edit}
                     filled={energy}
+                    setFilled={setEnergy}
                     containerLength={maxEnergy}
                   />
-                  Max {maxEnergy}
                 </div>
               </div>
             </div>

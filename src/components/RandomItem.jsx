@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const RandomItem = ({ numberOfItems, itemList }) => {
+export const RandomItem = ({ numberOfItems, itemList, listName }) => {
   console.log("nr Items: ", numberOfItems, "List: ", itemList);
 
   const selectedItems = [];
@@ -26,14 +26,19 @@ export const RandomItem = ({ numberOfItems, itemList }) => {
 
   return (
     <div>
-      Random item{" "}
-      {selectedItems.map((item, index) => (
-        <div className="border p-2 m-2" key={index}>
-          <p className="font-enterCommandBold"> {item.name}</p>
-          <p className="leading-none">{item.description}</p>
-          <p>{item.price}</p>
-        </div>
-      ))}
+      <h2>{listName}</h2>
+      <div className="grid grid-cols-2">
+        {selectedItems.map((item, index) => (
+          <div className="border p-2 m-2" key={index}>
+            <p className="font-enterCommandBold text-cerulea-green">
+              {" "}
+              {item.name}
+            </p>
+            <p className="leading-none">{item.description}</p>
+            <p className="text-cerulea-gold">{item.price} gold</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -41,4 +46,5 @@ export const RandomItem = ({ numberOfItems, itemList }) => {
 RandomItem.propTypes = {
   numberOfItems: PropTypes.any,
   itemList: PropTypes.array,
+  listName: PropTypes.string,
 };

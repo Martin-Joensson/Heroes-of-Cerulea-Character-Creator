@@ -38,9 +38,9 @@ export const Button = ({ action, setHero, edit, setEdit }) => {
       updateHeroProperty("hair", RandomColor());
       updateHeroProperty("clothes", RandomColor());
       updateHeroProperty("hearts", 3);
-      updateHeroProperty("maxHearts", 4);
+      updateHeroProperty("maxHearts", 3);
       updateHeroProperty("energy", 3);
-      updateHeroProperty("maxEnergy", 4);
+      updateHeroProperty("maxEnergy", 3);
       updateHeroNestedProperty("inventory", "specialItem", RandomSpecialItem());
       updateHeroNestedProperty("stats", "might", attributes[0]);
       updateHeroNestedProperty("stats", "bravery", attributes[1]);

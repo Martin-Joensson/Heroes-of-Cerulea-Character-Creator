@@ -26,21 +26,20 @@ export const Container = ({ type, edit, containerLength, filled, setFilled }) =>
   return (
     <>
       <div className="flex justify-center">
-        {edit ? (
+        
           <button className="hover:opacity-50 w-4" onClick={decrease}>
             -
           </button>
-        ) : null}
+      
         <div className="w-20 grid grid-cols-6 gap-0">
           {Array.from({ length: containerLength }, (_, index) => (
             <Icons key={index} icon={type} filled={index < filled} />
           ))}
         </div>
-        {edit ? (
+
           <button className="hover:opacity-50 w-4" onClick={increase}>
             +
           </button>
-        ) : null}
       </div>
     </>
   );

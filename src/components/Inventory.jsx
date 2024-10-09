@@ -32,7 +32,7 @@ export const Inventory = ({
       </h3>
       <div className="grid grid-cols-2">
         {invArray.slice(0, inventorySize).map((slot, index) => (
-          <div className="border m-1" key={index}>
+          <div className="border m-1 min-h-14" key={index}>
             <p>{slot.slot}</p>
             <p className="font-enterCommandBold">{slot.item}</p>
           </div>

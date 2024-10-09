@@ -13,13 +13,26 @@ export const Shop = () => {
 
   return (
     <div className="">
-      <p>Shop - Not ready yet</p>
-      <p>In Stock? {inStock} items</p>
-      <button className="p-2 bg-cerulea-blue " onClick={howManyItemsInStock}>
-        Restock Shop
+      <button
+        className="p-2 bg-cerulea-blue "
+        onClick={howManyItemsInStock}
+      >
+        Randomize Items
       </button>
-      <RandomItem numberOfItems={inStock} itemList={shopItems.shopItems} />
-      {generalItems.generalItems.map((item, index) => (
+      <p>In Stock? {inStock} items</p>
+      <div className="mx-10">
+        <RandomItem
+          listName={"Shop Items"}
+          numberOfItems={inStock}
+          itemList={shopItems.shopItems}
+        />
+        <RandomItem
+          listName={"Treasure Items"}
+          numberOfItems={1}
+          itemList={generalItems.generalItems}
+        />
+      </div>
+      {/* {generalItems.generalItems.map((item, index) => (
         <div className="border p-2 m-2" key={index}>
           <p className="font-enterCommandBold"> {item.name}</p>
           <p className="leading-none">{item.description}</p>
@@ -32,7 +45,7 @@ export const Shop = () => {
           <p className="leading-none">{item.description}</p>
           <p>{item.price}</p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
