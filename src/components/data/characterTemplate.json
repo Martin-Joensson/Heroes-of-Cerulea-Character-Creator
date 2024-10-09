@@ -19,7 +19,9 @@
     },
 
     "hearts": 3,
+    "maxHearts": 3,
     "energy": 3,
+    "maxEnergy": 3,
     "inventory": {
       "startWeapon": {
         "elf": "Sword",

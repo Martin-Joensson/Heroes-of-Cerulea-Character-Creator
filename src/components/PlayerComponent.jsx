@@ -6,8 +6,7 @@ import { Container } from "./Container";
 import { Inventory } from "./Inventory";
 
 export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
- 
-  const  player  =  hero ;
+  const player = hero;
   const [selectedName, setSelectedName] = useState(player.name);
   const [selectedKin, setSelectedKin] = useState(player.kin);
   const [selectedHair, setSelectedHair] = useState(player.hair);
@@ -25,6 +24,11 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
   const [keys, setKeys] = useState(player.inventory.keys);
   const [gems, setGems] = useState(player.inventory.gems);
   const [trinity, setTrinity] = useState(player.inventory.trinity);
+
+  const [hearts, setHearts] = useState(player.hearts);
+  const [energy, setEnergy] = useState(player.energy);
+  const [maxHearts, setMaxHearts] = useState(player.maxHearts);
+  const [maxEnergy, setMaxEnergy] = useState(player.maxEnergy);
 
   useEffect(() => {
     setSelectedName(hero.name);
@@ -262,13 +266,23 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                 <div>---</div>
                 <div>
                   Hearts:{" "}
-                  <Container type="heart" edit={edit} filled={player.hearts} />
-                  {player.hearts}
+                  <Container
+                    type="heart"
+                    edit={edit}
+                    filled={hearts}
+                    setFilled={setHearts}
+                  />
+                  Max: {maxHearts}
                 </div>
                 <div>
                   Energy:{" "}
-                  <Container type="bolt" edit={edit} filled={player.energy} />
-                  {player.energy}
+                  <Container
+                    type="bolt"
+                    edit={edit}
+                    filled={energy}
+                    setFilled={setEnergy}
+                  />
+                  Max: {maxEnergy}
                 </div>
               </div>
             </div>
@@ -432,13 +446,13 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
 
                 <div>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
-                  <Container type="heart" edit={edit} filled={player.hearts} />
-                  Max {player.hearts}
+                  <Container type="heart" edit={edit} filled={hearts} />
+                  Max {maxHearts}
                 </div>
                 <div>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
-                  <Container type="bolt" edit={edit} filled={player.energy} />
-                  Max {player.energy}
+                  <Container type="bolt" edit={edit} filled={energy} />
+                  Max {maxEnergy}
                 </div>
               </div>
             </div>
