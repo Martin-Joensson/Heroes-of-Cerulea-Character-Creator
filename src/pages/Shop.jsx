@@ -14,9 +14,12 @@ export const Shop = () => {
   return (
     <div className="">
       <p>Shop - Not ready yet</p>
-      <button onClick={howManyItemsInStock}>In Stock? {inStock} items</button>
+      <p>In Stock? {inStock} items</p>
+      <button className="p-2 bg-cerulea-blue " onClick={howManyItemsInStock}>
+        Restock Shop
+      </button>
       <RandomItem numberOfItems={inStock} itemList={shopItems.shopItems} />
-      {/* {generalItems.generalItems.map((item, index) => (
+      {generalItems.generalItems.map((item, index) => (
         <div className="border p-2 m-2" key={index}>
           <p className="font-enterCommandBold"> {item.name}</p>
           <p className="leading-none">{item.description}</p>
@@ -29,7 +32,7 @@ export const Shop = () => {
           <p className="leading-none">{item.description}</p>
           <p>{item.price}</p>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };

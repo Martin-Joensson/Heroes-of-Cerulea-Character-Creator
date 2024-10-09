@@ -27,7 +27,7 @@ export const Navigation = () => {
           Monster/Boss Generator
         </button>
       </NavLink>
-      <NavLink className="hidden flex-grow bg-cerulea-green" to="/shop">
+      <NavLink className="flex-grow bg-cerulea-green" to="/shop">
         <button
           aria-label="Link to Character generator"
           className="nav-button flex-grow w-full "

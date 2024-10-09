@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import playerTemplate from "../components/data/characterTemplate.json";
 import { Button } from "../components/Button";
 import { Container } from "./Container";
 import { Inventory } from "./Inventory";
@@ -36,6 +35,10 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
     setSelectedHair(hero.hair);
     setSelectedClothes(hero.clothes);
     setSelectedSpecialItem(hero.inventory.specialItem);
+    setHearts(hero.hearts);
+    setEnergy(hero.energy);
+    setMaxHearts(hero.maxHearts);
+    setMaxEnergy(hero.maxEnergy);
     setSelectedAttributeValues({
       select1: hero.stats.might,
       select2: hero.stats.bravery,
@@ -180,7 +183,7 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
             <h2 className="text-xl">
               <form onChange={changeName} onSubmit={preventDefault}>
                 <label>Name: </label>
-                <input type="text" placeholder={player.name}></input>
+                <input type="text" placeholder={selectedName}></input>
               </form>
             </h2>
             <div className="flex flex-col tablet:grid tablet:grid-cols-2">
@@ -271,8 +274,22 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     edit={edit}
                     filled={hearts}
                     setFilled={setHearts}
+                    containerLength={maxHearts}
                   />
-                  Max: {maxHearts}
+                  Max:
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setMaxHearts(maxHearts - 1)}
+                  >
+                    -
+                  </button>
+                  {maxHearts}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setMaxHearts(maxHearts + 1)}
+                  >
+                    +
+                  </button>{" "}
                 </div>
                 <div>
                   Energy:{" "}
@@ -281,8 +298,22 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
                     edit={edit}
                     filled={energy}
                     setFilled={setEnergy}
+                    containerLength={maxEnergy}
                   />
-                  Max: {maxEnergy}
+                  Max:
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setMaxEnergy(maxEnergy - 1)}
+                  >
+                    -
+                  </button>
+                  {maxEnergy}
+                  <button
+                    className="hover:opacity-50 w-4"
+                    onClick={() => setMaxEnergy(maxEnergy + 1)}
+                  >
+                    +
+                  </button>{" "}
                 </div>
               </div>
             </div>
@@ -446,12 +477,22 @@ export const PlayerComponent = ({ edit, setEdit, hero, setHero }) => {
 
                 <div>
                   <span className="text-cerulea-red">Hearts:</span>{" "}
-                  <Container type="heart" edit={edit} filled={hearts} />
+                  <Container
+                    type="heart"
+                    edit={edit}
+                    filled={hearts}
+                    containerLength={maxHearts}
+                  />
                   Max {maxHearts}
                 </div>
                 <div>
                   <span className="text-cerulea-gold">Energy:</span>{" "}
-                  <Container type="bolt" edit={edit} filled={energy} />
+                  <Container
+                    type="bolt"
+                    edit={edit}
+                    filled={energy}
+                    containerLength={maxEnergy}
+                  />
                   Max {maxEnergy}
                 </div>
               </div>

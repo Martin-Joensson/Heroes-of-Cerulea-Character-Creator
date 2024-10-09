@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
+
 export const RandomItem = ({ numberOfItems, itemList }) => {
-  console.log("nr Items: ",numberOfItems, "List: ",itemList)
+  console.log("nr Items: ", numberOfItems, "List: ", itemList);
 
   const selectedItems = [];
 
@@ -9,18 +11,18 @@ export const RandomItem = ({ numberOfItems, itemList }) => {
 
   const SelectItems = () => {
     while (selectedItems.length < numberOfItems) {
-      console.log("Selected items length:", selectedItems.length)
+      console.log("Selected items length:", selectedItems.length);
       let item = itemList[RandomNumber()];
 
       if (!selectedItems.includes(item)) {
         selectedItems.push(item);
       }
     }
-  }
+  };
 
   SelectItems();
 
-  console.log("Selected items: ",selectedItems)
+  console.log("Selected items: ", selectedItems);
 
   return (
     <div>
@@ -34,4 +36,9 @@ export const RandomItem = ({ numberOfItems, itemList }) => {
       ))}
     </div>
   );
+};
+
+RandomItem.propTypes = {
+  numberOfItems: PropTypes.any,
+  itemList: PropTypes.array,
 };

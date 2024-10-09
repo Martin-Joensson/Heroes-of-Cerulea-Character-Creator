@@ -9,11 +9,12 @@ export const Header = () => {
       <div className="relative top-0 left-0 bg-cerulea-gold text-black w-full">
         <NavLink to="/">
           <img src={group} alt="elf" className="w-40 m-auto no-print" />
-          {/* <img
+          <p className="">COMPATIBLE WITH</p>
+          <img
             src={logo}
             alt="Heroes of Cerulea logo"
             className="w-40 m-auto"
-          /> */}
+          />
           <h1 className="text-xxl no-print p-2 m-auto text-text-light">
             Heroes of Cerulea - Digital tools
           </h1>
