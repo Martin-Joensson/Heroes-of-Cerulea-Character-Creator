@@ -12,14 +12,7 @@ export const Shop = () => {
   };
 
   return (
-    <div className="">
-      <button
-        className="p-2 bg-cerulea-blue "
-        onClick={howManyItemsInStock}
-      >
-        Randomize Items
-      </button>
-      <p>{inStock} items in stock in the shop.</p>
+    <div>
       <div className="mx-10">
         <RandomItem
           listName={"Shop Items"}
@@ -46,6 +39,14 @@ export const Shop = () => {
           <p>{item.price}</p>
         </div>
       ))} */}
+      <button
+        className="p-2 bg-cerulea-red action-button"
+        onClick={howManyItemsInStock}
+      >
+        <p className="font-enterCommandBold">Randomize Items</p>
+        <p className="font-enterCommandItalic">Removes current items</p>
+      </button>
+      <p>{inStock} items in stock in the shop.</p>
     </div>
   );
 };
