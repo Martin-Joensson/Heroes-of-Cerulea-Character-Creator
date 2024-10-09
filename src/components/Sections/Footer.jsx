@@ -1,4 +1,6 @@
-import elf from "/images/Elf.png";
+import elf from "/images/sword.png";
+import license from "/images/license.png";
+
 import git from "/images/github-mark.svg";
 import portfolio from "/images/briefcase-solid.svg";
 
@@ -38,6 +40,15 @@ export const Footer = () => {
         alt="elf"
         className="w-10 h-10 absolute bottom-0 right-2 no-print"
       />
+      <div className="bg-white">
+
+
+      <img
+        src={license}
+        alt="license"
+        className="h-10 bottom-0 p-1 m-auto bg-white no-print"
+        />
+        </div>
     </div>
   );
 };
