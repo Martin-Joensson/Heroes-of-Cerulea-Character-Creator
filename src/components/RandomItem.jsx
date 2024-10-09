@@ -35,7 +35,7 @@ export const RandomItem = ({ numberOfItems, itemList, listName }) => {
               {item.name}
             </p>
             <p className="leading-none">{item.description}</p>
-            <p className="text-cerulea-gold">{item.price} gold</p>
+            <p className="text-cerulea-gold">{item.price} gems</p>
           </div>
         ))}
       </div>

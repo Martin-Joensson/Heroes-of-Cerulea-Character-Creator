@@ -19,7 +19,7 @@ export const Shop = () => {
       >
         Randomize Items
       </button>
-      <p>In Stock? {inStock} items</p>
+      <p>{inStock} items in stock in the shop.</p>
       <div className="mx-10">
         <RandomItem
           listName={"Shop Items"}
