@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 // import boltOutline from "/images/bolt-lightning-outline.svg";
 import { Icons } from "./Icons";
 
-export const Container = ({ type, edit, containerLength, filled, setFilled }) => {
+export const Container = ({ type, containerLength, filled, setFilled }) => {
   //const [filledIcons, setFilledIcons] = useState(filled);
 
   //const containerLength = 12;
@@ -48,7 +48,6 @@ export const Container = ({ type, edit, containerLength, filled, setFilled }) =>
 Container.propTypes = {
   type: PropTypes.any,
   containerLength: PropTypes.number,
-  edit: PropTypes.bool,
   filled: PropTypes.func,
   setFilled: PropTypes.func,
 };

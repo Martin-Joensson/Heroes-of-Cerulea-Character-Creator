@@ -5,7 +5,6 @@ import { RandomColor } from "./randomizers/RandomColor";
 import { RandomName } from "./randomizers/RandomName";
 import { RandomSpecialItem } from "./randomizers/RandomSpecialItem";
 import { RandomAttributes } from "./randomizers/RandomAttributes";
-import playerTemplate from "../components/data/characterTemplate.json";
 
 export const Button = ({ action, setHero, edit, setEdit }) => {
   function capitalizeFirstLetter(string) {
